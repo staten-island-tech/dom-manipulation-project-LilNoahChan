@@ -7,7 +7,10 @@ const DOMSelectors = {
 
 function backgroundAndText(background, text) {
   background.style.backgroundColor = "red";
-  text.innerHTML = "This is now a big red box";
-  text.style.dontSize = "40px";
+  text.textContent = "This is now a bigger red box";
+  text.style.fontSize = "40px";
 }
-backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+
+DOMSelectors.button.addEventListener("click", function(){
+  backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+});
