@@ -3,28 +3,27 @@
 const DOMSelectors = {
   songName: document.getElementById("songName"),
   artistName: document.getElementById("artistName"),
-  setImg: document.getElementById("setImg"),
-  set: document.getElementById("set"),
+  imgURL: document.getElementById("imgURL"),
+  create: document.getElementById("create"),
   container: document.getElementById("container"),
-  temp: document.querySelector(".fake"),
-  getRid: document.getElementById("remove"),
+  temp: document.querySelector("display"),
+  remove: document.getElementById("remove"),
 };
 
 function addNewDiv() {}
 
-DOMSelectors.set.addEventListener("click", function () {
+DOMSelectors.create.addEventListener("click", function () {
   let song = DOMSelectors.songName.value;
   let artist = DOMSelectors.artistName.value;
-  let img = DOMSelectors.setImg.value;
+  let img = DOMSelectors.imgURL.value;
 
   DOMSelectors.container.insertAdjacentHTML(
     "afterbegin",
-    `<div class="fake">
+    `<div class="temp">
         <image src></image>
-        <h1 class="son">${song}</h1>
+        <h1 class="song">${song}</h1>
         <h2 class="art">${artist}</h2>
         <img src="${img}" class="myImage"alt="">
-        <br>
         <button id="remove" onclick="this.parentElement.remove()">Delete</button>
     </div>`
   );
