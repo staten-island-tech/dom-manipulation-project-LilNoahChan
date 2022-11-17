@@ -23,8 +23,8 @@ DOMSelectors.create.addEventListener("click", function () {
         <image src></image>
         <h1 class="song">Title: ${song}</h1>
         <img src="${img}" class="myImage"alt="">
-        <h2 class="art">Song By:${artist}</h2>
+      <h2 class="art">Song By:${artist}</h2>
         <button id="remove" onclick="this.parentElement.remove()">Delete</button>
-    </div>`
+    </div>` //whoops
   );
 });
