@@ -10,20 +10,18 @@ const DOMSelectors = {
   remove: document.getElementById("remove"),
 };
 
-function addNewDiv() {}
-
 DOMSelectors.create.addEventListener("click", function () {
-  let song = DOMSelectors.songName.value;
-  let artist = DOMSelectors.artistName.value;
-  let img = DOMSelectors.imgURL.value;
+  let input1 = DOMSelectors.songName.value;
+  let input2 = DOMSelectors.artistName.value;
+  let input3 = DOMSelectors.imgURL.value;
 
   DOMSelectors.container.insertAdjacentHTML(
     "afterbegin",
     `<div class="display">
         <image src></image>
-        <h1 class="song">Title: ${song}</h1>
-        <img src="${img}" class="myImage"alt="">
-      <h2 class="art">Song By:${artist}</h2>
+        <h1 class="song">Title: ${input1}</h1>
+        <img src="${input3}" class="myImage"alt="">
+      <h2 class="artist">Song By:${input2}</h2>
         <button id="remove" onclick="this.parentElement.remove()">Delete</button>
     </div>` //whoops
   );
